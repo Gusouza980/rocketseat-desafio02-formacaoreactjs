@@ -18,4 +18,6 @@ export const defaultTheme = {
 
     'background': '#FAFAFA',
     white: '#FFFFFF',
+
+
 }
