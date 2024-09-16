@@ -3,7 +3,8 @@ import { css } from 'styled-components'
 export const mixins = {
   containers: {
     content: css`
-      width: 75rem;
+      width: 100%;
+      max-width: 75rem;
       margin: 0 auto;
     `
   },
