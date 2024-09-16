@@ -23,4 +23,8 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+
+    :focus{
+        outline: none;
+    }
 `

@@ -1,6 +1,12 @@
 import { css } from 'styled-components'
 
 export const mixins = {
+  containers: {
+    content: css`
+      width: 75rem;
+      margin: 0 auto;
+    `
+  },
   fonts: {
     titleXL: css`
       font-family: 'Baloo 2', sans-serif;
