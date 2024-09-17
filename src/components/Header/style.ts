@@ -38,6 +38,7 @@ export const CartButtonContainer = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    position: relative;
     background-color: ${(props) => props.theme.colors["yellow-light"]};
     color: ${(props) => props.theme.colors["yellow-dark"]};
     transition: all 0.1s;
@@ -48,5 +49,20 @@ export const CartButtonContainer = styled.div`
         background-color: ${(props) => props.theme.colors["yellow-dark"]};
         color: ${(props) => props.theme.colors["yellow-light"]};
         transform: scale(1.1);
-    }   
+    }
+
+    > div{
+        position: absolute;
+        width: 1.3rem;
+        height: 1.3rem;
+        top: -0.65rem;
+        right: -0.65rem;
+        border-radius: 50%;
+        background-color: ${(props) => props.theme.colors["yellow-dark"]};
+        ${mixins.fonts.textXS}
+        color: ${(props) => props.theme.colors["white"]};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `
