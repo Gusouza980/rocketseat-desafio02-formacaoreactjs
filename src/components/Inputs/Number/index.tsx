@@ -1,30 +1,21 @@
-import { InputHTMLAttributes, useState } from "react"
+import { InputHTMLAttributes } from "react"
 import { InputNumberContainer, InputNumberInput } from "./style"
 import { Minus, Plus } from "phosphor-react"
 
 type InputNumberProps = InputHTMLAttributes<HTMLInputElement> & {
-
+    quantity: number;
+    increment: () => void;
+    decrement: () => void;
 }
 
-export function InputNumber({ required, ...props }: InputNumberProps) {
-
-    const [value, setValue] = useState(1)
-
-    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-        const inputValue = event.target.value;
-        const onlyNumbers = parseInt(inputValue.replace(/\D/g, '')); // Remove caracteres não numéricos
-        setValue(onlyNumbers);
-    }
+export function InputNumber({ quantity, increment, decrement, required, ...props }: InputNumberProps) {
 
     function handleIncrement() {
-        if (value >= 9) return;
-        setValue(value + 1);
+        increment();
     }
 
     function handleDecrement() {
-        if (value > 1) {
-            setValue(value - 1);
-        }
+        decrement();
     }
 
     return (
@@ -32,7 +23,7 @@ export function InputNumber({ required, ...props }: InputNumberProps) {
             <button>
                 <Minus size={14} onClick={handleDecrement} />
             </button>
-            <InputNumberInput type="text" required={required} {...props} onChange={handleInputChange} value={value} />
+            <InputNumberInput type="text" required={required} readOnly={true} {...props} value={quantity} />
             <button>
                 <Plus size={14} onClick={handleIncrement} />
             </button>
