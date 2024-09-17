@@ -71,7 +71,7 @@ export const CoffeListCardFooter = styled.div`
         align-items: center;
         justify-content: end;
 
-        button{
+        > button{
             background-color: ${props => props.theme.colors['purple']};
             border: none;
             border-radius: 6px;

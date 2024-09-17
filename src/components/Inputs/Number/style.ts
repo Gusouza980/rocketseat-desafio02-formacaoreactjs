@@ -14,6 +14,15 @@ export const InputNumberContainer = styled.div`
     color: ${props => props.theme.colors['base-title']};
     ${mixins.fonts.textM}
 
+    button{
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     svg {
         cursor: pointer;
         color: ${props => props.theme.colors['purple']};
@@ -27,6 +36,6 @@ export const InputNumberContainer = styled.div`
 export const InputNumberInput = styled.input`
     background-color: transparent;
     border: 0;
-    width: 2rem;
+    width: 1rem;
     text-align: center;
 `

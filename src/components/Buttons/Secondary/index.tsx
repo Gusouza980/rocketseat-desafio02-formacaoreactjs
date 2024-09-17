@@ -1,11 +1,13 @@
 import { ButtonHTMLAttributes } from "react";
 import { SecondaryButtonContainer } from "./style";
 
-type SecondaryButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+type SecondaryButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    height?: string;
+}
 
-export function SecondaryButton({ ...props }: SecondaryButtonProps) {
+export function SecondaryButton({ height, ...props }: SecondaryButtonProps) {
     return (
-        <SecondaryButtonContainer>
+        <SecondaryButtonContainer height={height}>
             <button {...props}>
                 {props.children}
             </button>
