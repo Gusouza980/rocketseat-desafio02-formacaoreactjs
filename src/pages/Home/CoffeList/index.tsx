@@ -8,6 +8,17 @@ export function CoffeList() {
                 <h2>Nossos Cafés</h2>
                 <div>
                     <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
+                    <CoffeListCard />
                 </div>
             </CoffeListContainer>
         </CoffeListSection>

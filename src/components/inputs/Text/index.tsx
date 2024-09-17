@@ -3,9 +3,11 @@ import { InputTextInput, InputTextContainer, OptionalText } from "./style";
 
 type InputTextProps = InputHTMLAttributes<HTMLInputElement> & {
     label: string
+    width?: string
+    maxWidth?: string
 }
 
-export function InpuText({ required, label, ...props }: InputTextProps) {
+export function InpuText({ width, maxWidth, required, label, ...props }: InputTextProps) {
 
     const [focus, setFocus] = useState(false)
 
@@ -18,7 +20,7 @@ export function InpuText({ required, label, ...props }: InputTextProps) {
     }
 
     return (
-        <InputTextContainer>
+        <InputTextContainer width={width} maxWidth={maxWidth}>
             <InputTextInput type="text" placeholder={label} required={required} onFocus={handleOnFocus} onBlur={handleOnBlur} {...props} />
             {(!required && !focus) && <OptionalText>Opcional</OptionalText>}
         </InputTextContainer>

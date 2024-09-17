@@ -1,9 +1,15 @@
 import styled from "styled-components";
 import { mixins } from "../../../styles/mixins";
 
-export const InputTextContainer = styled.div`
+interface InputTextContainerProps {
+    width?: string;
+    maxWidth?: string;
+}
+
+export const InputTextContainer = styled.div<InputTextContainerProps>`
     position: relative;
-    width: 100%;
+    width: ${props => props.width || '100%'};
+    max-width: ${props => props.maxWidth || '100%'};
 `
 
 export const InputTextInput = styled.input`

@@ -20,7 +20,8 @@ export const CoffeListContainer = styled.div`
 
     > div{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-        gap: 1.875rem;
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        grid-row-gap: 4rem;
+        grid-column-gap: 2.5rem;
     }
 `

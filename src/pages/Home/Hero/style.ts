@@ -74,7 +74,7 @@ export const HeroImage = styled.img`
     width: 100%;
     max-width: 29.75rem;
     height: 100%;
-    max-width: ;
+    max-width: 29.75rem;
     object-fit: cover;
     object-position: center;
 `

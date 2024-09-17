@@ -4,6 +4,7 @@ import { mixins } from "../../../styles/mixins";
 export const InputNumberContainer = styled.div`
     background-color: ${props => props.theme.colors['base-input']};
     width: fit-content;
+    height: 2.375rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
