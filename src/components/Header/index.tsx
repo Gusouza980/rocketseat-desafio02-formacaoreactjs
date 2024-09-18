@@ -2,8 +2,12 @@ import { ButtonsContainer, CartButtonContainer, HeaderContainer, SelectedPlaceBu
 import logo from "../../assets/logo.svg";
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
 
 export function Header() {
+
+    const { cart } = useCart();
+
     return (
         <HeaderContainer>
             <NavLink to="/">
@@ -18,7 +22,7 @@ export function Header() {
                     <CartButtonContainer>
                         <ShoppingCart size={20} />
                         <div>
-                            1
+                            { cart.items.length }
                         </div>
                     </CartButtonContainer>
                 </NavLink>

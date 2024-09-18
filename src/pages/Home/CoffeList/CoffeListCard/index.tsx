@@ -4,6 +4,7 @@ import { InputNumber } from "../../../../components/Inputs/Number";
 import { ShoppingCart } from "phosphor-react";
 import { useState } from "react";
 import { Product } from "../../../../@types/product";
+import { useCart } from "../../../../hooks/useCart";
 
 interface CoffeListCardProps {
     product: Product;
@@ -11,6 +12,7 @@ interface CoffeListCardProps {
 
 export function CoffeListCard({ product }: CoffeListCardProps) {
     const [quantity, setQuantity] = useState(1);
+    const {addItem} = useCart();
 
     function incrementQuantity() {
         if (quantity >= 9) return;
@@ -23,7 +25,7 @@ export function CoffeListCard({ product }: CoffeListCardProps) {
     }
 
     function handleAddToCart() {
-
+        addItem(product, quantity);
     }
 
     return (

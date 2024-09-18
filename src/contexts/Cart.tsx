@@ -6,7 +6,7 @@ import { addItemAction, decrementItemQuantityAction, incrementItemQuantityAction
 
 interface CartContextType {
     cart: Cart;
-    addItem: (product: Product) => void;
+    addItem: (product: Product, quantity: number) => void;
     removeItem: (itemId: string) => void;
     incrementItemQuantity: (itemId: string) => void;
     decrementItemQuantity: (itemId: string) => void;
@@ -26,8 +26,8 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
     const { items } = cartState;
 
-    function addItem(product: Product) {
-        dispatch(addItemAction(product));
+    function addItem(product: Product, quantity: number) {
+        dispatch(addItemAction(product, quantity));
     }
 
     function removeItem(itemId: string) {
